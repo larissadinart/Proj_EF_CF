@@ -14,5 +14,6 @@ namespace Proj_EF_CF.Models
         public string Name { get; set; }
         public string Email { get; set; }
 
+        public virtual Telephone Telephone { get; set; }
     }
 }

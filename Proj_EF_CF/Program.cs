@@ -62,7 +62,7 @@ namespace Proj_EF_CF
                         Console.WriteLine(">>> REMOVER CONTATO: <<<\n\n");
                         Console.WriteLine("Digite o nome que deseja remover: ");
                         phone.Name = Console.ReadLine();
-                        var p1 = context.People.FirstOrDefault(d => d.Name == phone.Name);
+                        var p1 = context.Phones.FirstOrDefault(d => d.Name == phone.Name);
                         if (p1 != null)
                         {
                             Console.WriteLine("\n");
@@ -109,17 +109,20 @@ namespace Proj_EF_CF
                         #endregion
                         break;
                     case 4:
-                        #region BUSCAR ESPECIFICO // não esta relacionando as 2 tabelas
+                        #region BUSCAR ESPECIFICO 
 
                         Console.Clear();
-                        Console.WriteLine(">>> BUSCAR CONTATO: <<<\n\n");
-                        var person = new Telephone();
+                        Console.WriteLine(">>> BUSCAR CONTATO: <<<\n");
+                        Telephone person = new Telephone();
                         Console.WriteLine("Digite o nome que deseja buscar: ");
+                        Console.WriteLine("\n");
                         person.Name = Console.ReadLine();
                         var find = context.Phones.FirstOrDefault(y => y.Name == person.Name);
 
                         if (find != null) {
-                            Console.WriteLine(person.ToString());
+
+                            Console.WriteLine("\n");
+                            Console.WriteLine(find.ToString());
                             Console.WriteLine("\n");
                             Console.WriteLine("\nDigite enter para continuar.");
                             Console.ReadKey();

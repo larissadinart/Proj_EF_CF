@@ -16,8 +16,7 @@ namespace Proj_EF_CF.Models
         public string Name { get; set; }
         public string Phone { get; set; }
         public string Mobile { get; set; }
-        public virtual Person Person { get; set; }
-
+        public virtual List<Person> Person { get; set; }
         public override string ToString()
         {
             return $"Nome: {this.Name}\nTelefone: {this.Phone}\nMobile: {this.Mobile}";

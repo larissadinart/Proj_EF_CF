@@ -265,6 +265,10 @@
     <Compile Include="Migrations\202210111834483_CreateDatabase.designer.cs">
       <DependentUpon>202210111834483_CreateDatabase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202210141629306_alteracao.cs" />
+    <Compile Include="Migrations\202210141629306_alteracao.designer.cs">
+      <DependentUpon>202210141629306_alteracao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Person.cs" />
     <Compile Include="Models\Telephone.cs" />
@@ -278,6 +282,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202210111834483_CreateDatabase.resx">
       <DependentUpon>202210111834483_CreateDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210141629306_alteracao.resx">
+      <DependentUpon>202210141629306_alteracao.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
